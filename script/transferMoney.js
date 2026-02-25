@@ -8,9 +8,7 @@ document.getElementById('transfer-btn').addEventListener('click', function() {
     }
 
     const tAmount = getInputValue('transfer-amount');
-
     const crnBlnc = currentBalance();
-
     const nBlnc = crnBlnc - Number(tAmount);
 
     if (nBlnc < 0) {
@@ -19,7 +17,6 @@ document.getElementById('transfer-btn').addEventListener('click', function() {
     }
 
     const tPin = getInputValue('transfer-pin');
-
     if (tPin !== '1234') {
         alert('Transfer Failed');
         return;
